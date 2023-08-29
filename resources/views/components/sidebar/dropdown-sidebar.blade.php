@@ -1,5 +1,5 @@
-<li class="nav-item">
-  <a href="#" class="nav-link">
+<li class="nav-item {{$isActive ? 'menu-open' : ''}}">
+  <a href="#" class="nav-link {{$isActive ? 'active' : ''}}">
     {{$dropdownIcon}}
     <p>
       {{$title}}

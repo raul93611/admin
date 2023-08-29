@@ -1,5 +1,5 @@
 <li class="nav-item">
-  <a class="nav-link" href="{{$href}}">
+  <a {{ $attributes->merge(['class' => 'nav-link']) }} href="{{$href}}">
     {{$icon}}
     <p>
       {{$slot}}

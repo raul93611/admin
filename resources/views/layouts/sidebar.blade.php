@@ -7,18 +7,18 @@
   <div class="sidebar">
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <x-sidebar.dropdown-sidebar>
+        <x-sidebar.dropdown-sidebar :isActive="request()->is('chirps*') ? true : false">
           <x-slot:dropdownIcon>
             <i class="nav-icon fas fa-th"></i>
           </x-slot:dropdownIcon>
           <x-slot:title>
-            Dashboard
+            Chirps
           </x-slot:title>
-          <x-sidebar.nav-link :href="route('profile.edit')">
+          <x-sidebar.nav-link :href="route('chirps.index')" class="{{request()->is('chirps') ? 'active' : ''}}">
             <x-slot:icon>
               <i class="far fa-circle nav-icon"></i>
             </x-slot:icon>
-            Dashboard v1
+            Index
           </x-sidebar.nav-link>
           <x-sidebar.nav-link :href="route('profile.edit')">
             <x-slot:icon>
